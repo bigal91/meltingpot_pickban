@@ -34,6 +34,13 @@ http://localhost:3000/layouts/layout-simple/?backend=ws://localhost:8999
 
 Das Browserfenster aus vorherigem Schritt sollte sich nun aktualisieren auf alle Änderungen im Client.
 
+## Neue Grafiken einbinden
+
+Man hat die Gelgenheit ein overlay und underlay als Grafik für das Pick and Ban einzubringen.
+
+* Overlay Grafik: `layouts/layout-simple/overlay.png`
+* Underlay Grafik: `layouts/layout-simple/underlay.png`
+
 ## Konfiguration Teamnamen / Punktestand
 
 Die aktuelle Konfiguration findet sich in einer JSON Datei: `backend/config.json`
