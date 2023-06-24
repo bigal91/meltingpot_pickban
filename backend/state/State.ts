@@ -9,10 +9,12 @@ class State extends EventEmitter {
     super();
 
     this.data = new StateData();
+    // TODO: ggf. müssen wir hier eigene Config Datei anbinden
     this.data.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
   }
 
   champselectStarted(): void {
+    // TODO: ggf. müssen wir hier eigene Config Datei anbinden
     this.data.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
     this.emit('champSelectStarted');
