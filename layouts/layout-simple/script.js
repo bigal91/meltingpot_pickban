@@ -32,7 +32,8 @@ PB.on('newState', newState => {
     document.getElementById('red_name').innerText = config.redTeam.name;
 
     // Update score
-    document.getElementById('score').innerText = config.blueTeam.score + ' - ' + config.redTeam.score;
+    document.getElementById('score-blue').innerText = config.blueTeam.score;
+    document.getElementById('score-red').innerText = config.redTeam.score;
 
     // Update phase
     document.getElementById('phase').innerText = state.state;
@@ -79,6 +80,10 @@ PB.on('newState', newState => {
 
 PB.on('heartbeat', newHb => {
     Window.CONFIG = newHb.config;
+    document.getElementById('blue_name').innerText = newHb.config.frontend.blueTeam.name;
+    document.getElementById('red_name').innerText = newHb.config.frontend.redTeam.name;
+    document.getElementById('score-blue').innerText = newHb.config.frontend.blueTeam.score;
+    document.getElementById('score-red').innerText = newHb.config.frontend.redTeam.score;
 });
 
 PB.on('champSelectStarted', () => {
@@ -111,7 +116,22 @@ function inject(team) {
     </div>
 </div>`;
 
+    const tournamentPickBorderTemplate = `
+<div class="pick-border">
+</div>`;
+
+
+    const tournamentBanBorderTemplate = `
+<div class="ban-border">
+</div>`;
+
     for (let i = 0; i < 5; i++) {
+
+        if (i === 3) {
+            document.getElementById('picks_' + team).appendChild(parseHTML(tournamentPickBorderTemplate));
+            document.getElementById('bans_' + team).appendChild(parseHTML(tournamentBanBorderTemplate));
+        }
+
         const adaptedPickTemplate = pickTemplate.replace(/%id%/g, i);
         document.getElementById('picks_' + team).appendChild(parseHTML(adaptedPickTemplate));
 
