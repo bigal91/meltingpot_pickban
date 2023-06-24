@@ -4,6 +4,7 @@
 
 * Installiere aktuelle Version von Git (https://git-scm.com/downloads)
 * Erstelle einen leeren Ordner für das Repo auf deinem Rechner (Ort beliebig)
+* Installiere Node JS (Exakt diese Version https://nodejs.org/download/release/v16.7.0/node-v16.7.0-x64.msi)
 * Öffne Terminal (Git Bash)
 * Navigiere in diesen Ordner: `cd /c/meinpfad/meinordner`
 * Führe folgenden Befehl aus: `git checkout https://github.com/bigal91/meltingpot_pickban`
