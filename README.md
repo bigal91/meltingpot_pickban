@@ -47,3 +47,18 @@ Man hat die Gelgenheit ein overlay und underlay als Grafik für das Pick and Ban
 
 Die aktuelle Konfiguration findet sich in einer JSON Datei: `backend/config.json`.
 In dieser Version des Software werden die Teamnamen aus den Streamhelper Dateien gezogen, sofern der Ordner, indem das Projekt geklont wurde korrekt sitzt wie hier beschrieben.
+
+
+# Backend neu starten
+
+Wenn STRG + C nicht gereicht hat das Backend abzuschießen, folgender Befehl in der CMD als Admin ausführen:
+
+```
+# oder jeweiligen Port angeben, der nötig ist am Ende
+netstat -ano | findstr :8999
+
+# und Prozess abschießen, wo PID die letzte Zahl in der Zeile des vorherigen Befehl Outputs war
+taskkill /PID <PID> /F
+```
+
+
