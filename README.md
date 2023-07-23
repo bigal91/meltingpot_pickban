@@ -5,17 +5,18 @@
 * Installiere aktuelle Version von Git (https://git-scm.com/downloads)
 * Erstelle einen leeren Ordner für das Repo auf deinem Rechner (Ort beliebig)
 * Installiere Node JS (Exakt diese Version https://nodejs.org/download/release/v16.7.0/node-v16.7.0-x64.msi)
-* Öffne Terminal (Git Bash)
-* Navigiere in den StreamHelper Textfiles Ordner: `cd /c/meinpfad/OBS Setup Melting Pot V2/1 StreamHelper/Textfiles`
+* Öffne Terminal (Windows Button > `git Bash` eingeben > ENTER)
+* Navigiere in den StreamHelper Textfiles Ordner in der Konsole, etwa so: `cd /c/meinpfad/OBS Setup Melting Pot V2/1 StreamHelper/Textfiles`
 * Führe folgenden Befehl aus: `git clone https://github.com/bigal91/meltingpot_pickban.git`
 
-Du hast nun den Code lokal bei dir vorliegen.
+Du hast nun den Code lokal bei dir vorliegen mit dem namen `meltingpot_pickban`. 
+Das ist nun ein lokales Git Repository, indem man Git Befehle zum Aktualisieren verwenden kann.
 
 ## Vor jedem neuen Turnier/Cast
 
 * Starte League Client
 * Öffne Terminal (Git Bash)
-* Navigiere in Ordner des Projekts: `cd /c/meinpfad/meltingpot_pickban`
+* Navigiere in Ordner des geklonten Projekts: `cd /c/meinpfad/meltingpot_pickban`
 * Aktualisiere das Repo (falls es updates gab im Code): `git pull`
 * Navigiere in backend und starte es: `cd backend` + `npm install && npm start`
 * Öffne ein weiteres Terminal (Git Bash)
@@ -44,5 +45,5 @@ Man hat die Gelgenheit ein overlay und underlay als Grafik für das Pick and Ban
 
 ## Konfiguration Teamnamen / Punktestand
 
-Die aktuelle Konfiguration findet sich in einer JSON Datei: `backend/config.json`
-Eine CUSTOM Konfiguration (z.B. CSV/Excel Datei) für ein Turnier/Show/Cast für eine andere Input-Datei müssten wir gemeinsam erarbeiten.
+Die aktuelle Konfiguration findet sich in einer JSON Datei: `backend/config.json`.
+In dieser Version des Software werden die Teamnamen aus den Streamhelper Dateien gezogen, sofern der Ordner, indem das Projekt geklont wurde korrekt sitzt wie hier beschrieben.
