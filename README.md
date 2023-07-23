@@ -6,8 +6,8 @@
 * Erstelle einen leeren Ordner für das Repo auf deinem Rechner (Ort beliebig)
 * Installiere Node JS (Exakt diese Version https://nodejs.org/download/release/v16.7.0/node-v16.7.0-x64.msi)
 * Öffne Terminal (Git Bash)
-* Navigiere in diesen Ordner: `cd /c/meinpfad/meinordner`
-* Führe folgenden Befehl aus: `git checkout https://github.com/bigal91/meltingpot_pickban`
+* Navigiere in den StreamHelper Textfiles Ordner: `cd /c/meinpfad/OBS Setup Melting Pot V2/1 StreamHelper/Textfiles`
+* Führe folgenden Befehl aus: `git clone https://github.com/bigal91/meltingpot_pickban.git`
 
 Du hast nun den Code lokal bei dir vorliegen.
 
@@ -15,11 +15,11 @@ Du hast nun den Code lokal bei dir vorliegen.
 
 * Starte League Client
 * Öffne Terminal (Git Bash)
-* Navigiere in Ordner des Projekts: `cd /c/meinpfad/lol-pick-ban-ui`
+* Navigiere in Ordner des Projekts: `cd /c/meinpfad/meltingpot_pickban`
 * Aktualisiere das Repo (falls es updates gab im Code): `git pull`
 * Navigiere in backend und starte es: `cd backend` + `npm install && npm start`
 * Öffne ein weiteres Terminal (Git Bash)
-* Navigiere in Ordner des Projekts: `cd /c/meinpfad/lol-pick-ban-ui`
+* Navigiere in Ordner des Projekts: `cd /c/meinpfad/meltingpot_pickban`
 * Führe aus: `npm install -g serve && serve`
 
 Das Programm läuft nun und im Browser kannst du folgende Adresse aufrufen:

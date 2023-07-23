@@ -12,6 +12,10 @@ PB.on('newState', newState => {
     console.log(newState);
     const state = newState.state;
     const config = state.config.frontend;
+    const blueTeamName = state.teamBlueName;
+    const blueTeamScore = state.teamBlueScore;
+    const redTeamName = state.teamRedName;
+    const redTeamScore = state.teamRedScore;
 
     let activeTeam = 'blue';
     if (state.redTeam.isActive) {
@@ -28,12 +32,12 @@ PB.on('newState', newState => {
     }
 
     // Update team names
-    document.getElementById('blue_name').innerText = config.blueTeam.name;
-    document.getElementById('red_name').innerText = config.redTeam.name;
+    document.getElementById('blue_name').innerText = blueTeamName;
+    document.getElementById('red_name').innerText = redTeamName;
 
     // Update score
-    document.getElementById('score-blue').innerText = config.blueTeam.score;
-    document.getElementById('score-red').innerText = config.redTeam.score;
+    document.getElementById('score-blue').innerText = blueTeamScore;
+    document.getElementById('score-red').innerText = redTeamScore;
 
     // Update phase
     document.getElementById('phase').innerText = state.state;
