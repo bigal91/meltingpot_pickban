@@ -7,6 +7,7 @@
 * Installiere Node JS (Exakt diese Version https://nodejs.org/download/release/v16.7.0/node-v16.7.0-x64.msi)
 * Öffne Terminal (Windows Button > `git Bash` eingeben > ENTER)
 * Navigiere in den StreamHelper Textfiles Ordner in der Konsole, etwa so: `cd /c/meinpfad/OBS Setup Melting Pot V2/1 StreamHelper/Textfiles`
+* ALTERNATIV: Rechtsklick im Windows Ordner > `Git Bash here` macht dasselbe
 * Führe folgenden Befehl aus: `git clone https://github.com/bigal91/meltingpot_pickban.git`
 
 Du hast nun den Code lokal bei dir vorliegen mit dem namen `meltingpot_pickban`. 
