@@ -84,10 +84,10 @@ PB.on('newState', newState => {
 
 PB.on('heartbeat', newHb => {
     Window.CONFIG = newHb.config;
-    document.getElementById('blue_name').innerText = newHb.config.frontend.blueTeam.name;
-    document.getElementById('red_name').innerText = newHb.config.frontend.redTeam.name;
-    document.getElementById('score-blue').innerText = newHb.config.frontend.blueTeam.score;
-    document.getElementById('score-red').innerText = newHb.config.frontend.redTeam.score;
+    document.getElementById('blue_name').innerText = newHb.teamBlueName;
+    document.getElementById('red_name').innerText = newHb.teamRedName;
+    document.getElementById('score-blue').innerText = newHb.teamBlueScore;
+    document.getElementById('score-red').innerText = newHb.teamRedScore;
 });
 
 PB.on('champSelectStarted', () => {

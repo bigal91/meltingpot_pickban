@@ -9,18 +9,24 @@ class State extends EventEmitter {
     super();
 
     this.data = new StateData();
-    // TODO: ggf. müssen wir hier eigene Config Datei anbinden
-    this.data.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+    this.initConfigFiles();
   }
 
   champselectStarted(): void {
-    // TODO: ggf. müssen wir hier eigene Config Datei anbinden
-    this.data.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+    this.initConfigFiles();
 
     this.emit('champSelectStarted');
 
     this.data.champSelectActive = true;
     this.triggerUpdate();
+  }
+
+  initConfigFiles(): void {
+    this.data.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+    this.data.teamBlueName = fs.readFileSync('../../textfiles/eSports/Teams/Team 1_name.txt', 'utf-8');
+    this.data.teamBlueScore = fs.readFileSync('../../textfiles/eSports/Teams/Team 1_score.txt', 'utf-8');
+    this.data.teamRedName = fs.readFileSync('../../textfiles/eSports/Teams/Team 2_name.txt', 'utf-8');
+    this.data.teamRedScore = fs.readFileSync('../../textfiles/eSports/Teams/Team 2_score.txt', 'utf-8');
   }
 
   champselectEnded(): void {

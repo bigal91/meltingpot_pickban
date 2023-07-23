@@ -7,5 +7,9 @@ export default class HeartbeatEvent implements PBEvent {
   }
 
   eventType = 'heartbeat';
-  config: Config
+  config: Config;
+  teamBlueName = "Unset";
+  teamBlueScore = "X";
+  teamRedName = "Unset";
+  teamRedScore = "X";
 }

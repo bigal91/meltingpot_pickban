@@ -9,6 +9,10 @@ export class StateData {
   timer = 0;
   state = "PICK 1";
   config = new Config();
+  teamBlueName = "Unset";
+  teamBlueScore = "X";
+  teamRedName = "Unset";
+  teamRedScore = "X";
 
   getCurrentAction() {
     // If either team is active, return none

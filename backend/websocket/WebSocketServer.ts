@@ -67,8 +67,13 @@ class WebSocketServer {
   }
 
   sendHeartbeat(): void {
-    this.config = JSON.parse(fs.readFileSync("./config.json", "utf8"));
+    this.config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+
     const heartbeatEvent = new HeartbeatEvent(this.config);
+    heartbeatEvent.teamBlueName = fs.readFileSync('../../textfiles/eSports/Teams/Team 1_name.txt', 'utf-8');
+    heartbeatEvent.teamBlueScore = fs.readFileSync('../../textfiles/eSports/Teams/Team 1_score.txt', 'utf-8');
+    heartbeatEvent.teamRedName = fs.readFileSync('../../textfiles/eSports/Teams/Team 2_name.txt', 'utf-8');
+    heartbeatEvent.teamRedScore = fs.readFileSync('../../textfiles/eSports/Teams/Team 2_score.txt', 'utf-8');
     const heartbeatSerialized = JSON.stringify(heartbeatEvent);
 
     this.clients.forEach((client: WebSocket) => {
